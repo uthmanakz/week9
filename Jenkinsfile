@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('terraform init') {
             steps {
-                sh 'cd main.tf'
+                sh 'cd uthman-module'
             }
 
         }
