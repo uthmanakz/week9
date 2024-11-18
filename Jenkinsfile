@@ -8,23 +8,9 @@ pipeline {
     stages {
         stage ('terraform init') {
             steps {
-                sh '''
-                cd main.tf
-                terraform init
-                '''
+                sh 'cd main.tf'
             }
 
-        stage ('terraform plan') {
-            steps {
-                sh '''
-                cd main.tf
-                terraform plan
-                '''
-
-            }
-           
-
-        }
         }
     }
 }
