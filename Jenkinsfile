@@ -8,7 +8,10 @@ pipeline {
     stages {
         stage ('terraform init') {
             steps {
-                sh 'cd uthman-module'
+                sh '''
+                cd uthman-module
+                terraform init
+                '''
             }
 
         }
